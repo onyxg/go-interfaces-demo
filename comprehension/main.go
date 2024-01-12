@@ -1,4 +1,6 @@
-package basic
+package main
+
+import "fmt"
 
 /* definitions / behaviour */
 
@@ -32,47 +34,38 @@ func NewSuperHero(name string, heroName string, age int) SuperHero {
 	}
 }
 
-// Compare this snippet from basic/main.go:
+func (m *MySuperPerson) GetName() string {
+	return m.name
+}
+
+func (m *MySuperPerson) GetAge() int {
+	return m.age
+}
+
+func (m *MySuperPerson) GetHeroName() string {
+	return m.heroName
+}
+
+func (m *MySuperPerson) CanFly() bool {
+	return false
+}
+
+func (m *MySuperPerson) IsHuman() bool {
+	return true
+}
+
+func (m *MySuperPerson) IsSuperSpeed() bool {
+	return true
+}
+
+func (m *MySuperPerson) IsSuperStrength() bool {
+	return true
+}
 
 func main() {
+	var myHero SuperHero = NewSuperHero("Bruce Wayne", "Batman", 45)
 
-	var myHero SuperHero = NewSuperHero("John", "Superman", 21)
-	myHero.GetAge()
-
-	myHero.GetName()
-}
-
-func (m MySuperPerson) GetName() string {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (m MySuperPerson) GetAge() int {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (m MySuperPerson) GetHeroName() string {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (m MySuperPerson) CanFly() bool {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (m MySuperPerson) IsHuman() bool {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (m MySuperPerson) IsSuperSpeed() bool {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (m MySuperPerson) IsSuperStrength() bool {
-	//TODO implement me
-	panic("implement me")
+	fmt.Printf("My hero is %s\n", myHero.GetHeroName())
+	fmt.Printf("His real name is %s\n", myHero.GetName())
+	fmt.Printf("he is %d years old\n", myHero.GetAge())
 }

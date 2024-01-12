@@ -53,9 +53,9 @@ func main() {
 }
 
 func PrintPerson(p Person) {
-	fmt.Printf("Name: %s, Age: %d", p.GetName(), p.GetAge())
+	fmt.Printf("Name: %s, Age: %d\n", p.GetName(), p.GetAge())
 }
 
 func PrintNameOnly(p PersonName) {
-	fmt.Printf("Name: %s", p.GetName())
+	fmt.Printf("Name: %s\n", p.GetName())
 }
